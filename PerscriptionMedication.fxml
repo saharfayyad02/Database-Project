@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="696.0" prefWidth="1332.0" style="-fx-background-color: #fafad2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PerscriptionMedicationController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="63.0" prefWidth="1332.0" style="-fx-background-color: #deb887;" text="AL-Khatib Dental Clinic">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="513.0" layoutY="76.0" prefHeight="35.0" prefWidth="230.0" text="Perscription Medication Table">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="insert_Perscription_Medication" layoutX="35.0" layoutY="441.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="202.0" text="Insert Perscription Medication ">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.55" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect></Button>
+      <TextField fx:id="getPeamil" layoutX="262.0" layoutY="480.0" prefHeight="26.0" prefWidth="195.0" promptText="Pemail" />
+      <TextField fx:id="getPage" layoutX="464.0" layoutY="481.0" prefHeight="26.0" prefWidth="124.0" promptText="Patient_age" />
+      <TextField fx:id="getMedicineName" layoutX="597.0" layoutY="481.0" prefHeight="26.0" prefWidth="124.0" promptText="Medicine_name" />
+      <TextField fx:id="gettreatID" layoutX="1020.0" layoutY="481.0" prefHeight="26.0" prefWidth="105.0" promptText="Treatment_id" />
+      <TextField fx:id="getPatientName" layoutX="731.0" layoutY="481.0" prefHeight="26.0" prefWidth="124.0" promptText="Patient_name" />
+      <TextField fx:id="emailsearch" layoutX="35.0" layoutY="566.0" prefHeight="26.0" prefWidth="189.0" promptText="Pemail" />
+      <TextField fx:id="medicinesearch" layoutX="237.0" layoutY="567.0" prefHeight="26.0" prefWidth="124.0" promptText="Medicine_name" />
+      <Button fx:id="search" layoutX="35.0" layoutY="526.0" mnemonicParsing="false" onAction="#setserach" prefHeight="26.0" prefWidth="202.0" text="Search Perscription Medication ">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.53" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect></Button>
+      <Button fx:id="refresh" layoutX="35.0" layoutY="608.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="202.0" text="Refresh">
+         <effect>
+            <Lighting diffuseConstant="1.57" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <Button layoutX="35.0" layoutY="657.0" mnemonicParsing="false" onAction="#setPerscriptionTable" prefHeight="26.0" prefWidth="202.0" text="Delete Perscription Medication ">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.57" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect></Button>
+      <Button fx:id="homepage" layoutX="353.0" layoutY="670.0" mnemonicParsing="false" onAction="#homepage" prefHeight="26.0" prefWidth="105.0" text="Home Page">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.55" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect></Button>
+      <TextField fx:id="gettNotes" layoutX="1133.0" layoutY="480.0" prefHeight="26.0" prefWidth="189.0" promptText="Tnotes" />
+      <TextField fx:id="patientseacrh" layoutX="375.0" layoutY="567.0" prefHeight="26.0" prefWidth="124.0" promptText="Patient_name" />
+      <ComboBox fx:id="tables" layoutX="485.0" layoutY="671.0" onAction="#Choose" prefWidth="150.0">
+         <effect>
+            <Lighting diffuseConstant="1.54" specularConstant="0.07" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </ComboBox>
+      <DatePicker fx:id="datavisitsearch" layoutX="513.0" layoutY="567.0" prefHeight="25.0" prefWidth="150.0" promptText="Date_Of_Visit" />
+      <DatePicker fx:id="getDateVisit" layoutX="861.0" layoutY="481.0" prefHeight="25.0" prefWidth="150.0" promptText="Date_Of_Visit" />
+      <TableView fx:id="perscTable" layoutX="59.0" layoutY="120.0" prefHeight="284.0" prefWidth="1227.0">
+        <columns>
+          <TableColumn fx:id="PS_id" prefWidth="168.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Perscription_Medication_id" />
+          <TableColumn fx:id="pemail" minWidth="0.0" prefWidth="205.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Pemail" />
+            <TableColumn fx:id="patientage" minWidth="0.0" prefWidth="109.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Patient_age" />
+            <TableColumn fx:id="med_name" minWidth="0.0" prefWidth="157.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Medicine_name" />
+            <TableColumn fx:id="patientname" prefWidth="136.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Patient_name" />
+            <TableColumn fx:id="dateOfvisit" prefWidth="121.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Date_Of_Visit" />
+            <TableColumn fx:id="Treatid" prefWidth="138.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Treatment_id" />
+            <TableColumn fx:id="tNotes" prefWidth="191.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Tnotes" />
+        </columns>
+      </TableView>
+      <TextField fx:id="getPMid" layoutX="40.0" layoutY="481.0" prefHeight="25.0" prefWidth="211.0" promptText="Perscription_Medication_id" />
+   </children>
+</AnchorPane>

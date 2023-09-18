@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="740.0" prefWidth="1235.0" style="-fx-background-color: #fafad2;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PatientController">
+   <children>
+      <Pane layoutX="3.0" prefHeight="61.0" prefWidth="1232.0" style="-fx-background-color: #deb887;">
+         <children>
+            <Label layoutX="326.0" layoutY="17.0" text=" AL-Khatib Dental Clinic ">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="patientTable" layoutX="69.0" layoutY="109.0" prefHeight="282.0" prefWidth="691.0" style="-fx-border-color: #000000;">
+        <columns>
+          <TableColumn fx:id="pname1" prefWidth="165.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Pname" />
+          <TableColumn fx:id="pgender1" prefWidth="82.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Pgender" />
+            <TableColumn fx:id="pemail1" prefWidth="197.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Pemail" />
+            <TableColumn fx:id="page1" prefWidth="86.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="P_age" />
+            <TableColumn fx:id="pmedical" prefWidth="157.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Pmedicalstate" />
+        </columns>
+      </TableView>
+      <Label layoutX="403.0" layoutY="74.0" text="Patients Table">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="homepage" layoutX="320.0" layoutY="661.0" mnemonicParsing="false" onAction="#homepage" text="Home Page">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.55" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <ComboBox fx:id="tables" layoutX="442.0" layoutY="661.0" onAction="#Choose" prefHeight="25.0" prefWidth="129.0">
+         <effect>
+            <Lighting diffuseConstant="1.51" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </ComboBox>
+      <Button fx:id="insert_patient" layoutX="32.0" layoutY="422.0" mnemonicParsing="false" text="Insert Patient">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <effect>
+            <Lighting diffuseConstant="1.56" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Button fx:id="refresh" layoutX="30.0" layoutY="584.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="Refresh">
+         <effect>
+            <Lighting diffuseConstant="1.55" specularConstant="0.05" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="seachPatient" layoutX="30.0" layoutY="504.0" mnemonicParsing="false" onAction="#searchforpaitent" prefHeight="30.0" prefWidth="137.0" text="Search For Patient">
+         <effect>
+            <Lighting diffuseConstant="1.53" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="deletepatient" layoutX="30.0" layoutY="627.0" mnemonicParsing="false" onAction="#setDeletePatient" text="Delete Patient">
+         <effect>
+            <Lighting diffuseConstant="1.55" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="pname" layoutX="30.0" layoutY="460.0" prefHeight="25.0" prefWidth="103.0" promptText="Pname" />
+      <TextField fx:id="pemail" layoutX="256.0" layoutY="460.0" prefHeight="25.0" prefWidth="200.0" promptText="Pemail" />
+      <TextField fx:id="page" layoutX="462.0" layoutY="460.0" prefHeight="25.0" prefWidth="55.0" promptText="P_age" />
+      <TextField fx:id="namesearch" layoutX="30.0" layoutY="544.0" prefHeight="25.0" prefWidth="103.0" promptText="Pname" />
+      <TextField fx:id="getmedicalstate" layoutX="528.0" layoutY="460.0" promptText="Pmedicalstate" />
+      <TextField fx:id="gender" layoutX="138.0" layoutY="460.0" prefHeight="25.0" prefWidth="112.0" promptText="Pgender" />
+      <TextField fx:id="emailsearch" layoutX="138.0" layoutY="544.0" prefHeight="25.0" prefWidth="200.0" promptText="Pemail" />
+      <TextField fx:id="medicalstate" layoutX="350.0" layoutY="544.0" promptText="MedicalState" />
+      <Button fx:id="info" layoutX="778.0" layoutY="301.0" mnemonicParsing="false" onAction="#infopatient" prefHeight="30.0" prefWidth="200.0" text="Info For Patient_Appointments">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.8941176533699036" green="0.7686274647712708" blue="0.5137255191802979" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <DatePicker fx:id="dateNext" layoutX="778.0" layoutY="357.0" prefHeight="25.0" prefWidth="169.0" promptText="A_Date_Of_Next_visit" />
+      <TextField fx:id="numOnWaiting" layoutX="970.0" layoutY="357.0" prefHeight="26.0" prefWidth="252.0" promptText="A_Number_Of_Patient_On_waiting_List" />
+      <Button fx:id="infoPm" layoutX="777.0" layoutY="407.0" mnemonicParsing="false" onAction="#infopatientMedication" prefHeight="30.0" prefWidth="252.0" text="Info For Patient_Perscription Medication">
+         <effect>
+            <Lighting diffuseConstant="1.64" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.8941176533699036" green="0.7686274647712708" blue="0.5137255191802979" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect></Button>
+      <TextField fx:id="medicineName" layoutX="783.0" layoutY="460.0" promptText="Medicine_name" />
+      <Button fx:id="PatinetTreatmentDiagnosis" layoutX="778.0" layoutY="506.0" mnemonicParsing="false" onAction="#InfoPatinetTreatmentDiagnosis" text="Info For Patient_Treatment_Diagnosis">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.8941176533699036" green="0.7686274647712708" blue="0.5137255191802979" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect></Button>
+      <TextField fx:id="piadcostt" layoutX="782.0" layoutY="550.0" prefHeight="26.0" prefWidth="191.0" promptText="Treatment_Cost_Paid_Amount" />
+      <TextField fx:id="remaincost" layoutX="981.0" layoutY="550.0" prefHeight="26.0" prefWidth="229.0" promptText="Treatment_Cost_Remaining_Amount" />
+      <TextField fx:id="treattype" layoutX="783.0" layoutY="588.0" promptText="Ttype" />
+      <TextField fx:id="diagnosistype" layoutX="948.0" layoutY="588.0" promptText="Dtype" />
+      <Button fx:id="avgage" layoutX="778.0" layoutY="640.0" mnemonicParsing="false" onAction="#Averageage" text="Patinet Age Above AVG">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.8941176533699036" green="0.7686274647712708" blue="0.5137255191802979" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Button>
+      <Pane layoutX="912.0" layoutY="74.0" prefHeight="194.0" prefWidth="229.0">
+         <children>
+            <PieChart fx:id="pieChartt" layoutX="-4.0" layoutY="-5.0" prefHeight="206.0" prefWidth="237.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

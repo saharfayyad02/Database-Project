@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="669.0" style="-fx-background-color: #fafad2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainInterfaceController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-4.0" prefHeight="83.0" prefWidth="669.0" style="-fx-background-color: #deb887;">
+         <children>
+           
+            <Label layoutX="74.0" layoutY="17.0" prefHeight="49.0" prefWidth="522.0" text="Welcome To AL-Khatib Dental Clinic DataBase" textFill="#361009">
+               <font>
+                  <Font name="Times New Roman Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="243.0" fitWidth="341.0" layoutX="298.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../252917302_435204854839144_1236675390287979292_n.jpg" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="tables" layoutX="34.0" layoutY="141.0" onAction="#Choose" prefWidth="150.0" style="-fx-background-color: #deb887; -fx-border-color: #000000;" />
+      <Label layoutX="20.0" layoutY="103.0" text="Please Choose a Table To Open" textFill="#110303">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="322.0" text="Dr.Name: Ra'fat Alkhatib ">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="347.0" text="Tel: 02-2954705599">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="373.0" text="Email: dent_rafat@hotmail.com">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

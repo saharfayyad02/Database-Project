@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="748.0" prefWidth="1392.0" style="-fx-background-color: #fafad2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Treatment_To_PatientController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="63.0" prefWidth="1392.0" style="-fx-background-color: #deb887;" text="      AL-Khatib Dental Clinic">
+         <font>
+            <Font name="Times New Roman Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="284.0" layoutY="73.0" prefHeight="35.0" prefWidth="207.0" text="Treatment  To Patient Table">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="insertTreat" layoutX="28.0" layoutY="411.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Insert Treatment">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <TextField fx:id="getPemail" layoutX="28.0" layoutY="455.0" prefHeight="26.0" prefWidth="207.0" promptText="Pemail" />
+      <TextField fx:id="emailsearch" layoutX="28.0" layoutY="535.0" prefHeight="26.0" prefWidth="207.0" promptText="Pemail" />
+      <Button fx:id="searchtretment" layoutX="28.0" layoutY="496.0" mnemonicParsing="false" onAction="#stsearchtretment" prefHeight="26.0" prefWidth="134.0" text="Search Treatment">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <Button fx:id="refresh" layoutX="28.0" layoutY="575.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="134.0" text="Refresh">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <Button layoutX="28.0" layoutY="622.0" mnemonicParsing="false" onAction="#setDeleteTreatment" prefHeight="26.0" prefWidth="134.0" text="Delete Treatment">
+         <effect>
+            <Lighting diffuseConstant="1.6" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <Button fx:id="homepage" layoutX="235.0" layoutY="653.0" mnemonicParsing="false" onAction="#homepage" prefHeight="30.0" prefWidth="98.0" text="Home Page">
+         <effect>
+            <Lighting diffuseConstant="1.64" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Button>
+      <ComboBox fx:id="tables" layoutX="383.0" layoutY="653.0" onAction="#Choose" prefHeight="30.0" prefWidth="150.0">
+         <effect>
+            <Lighting diffuseConstant="1.62" specularConstant="0.0" specularExponent="0.0" surfaceScale="0.0">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8901960849761963" blue="0.6705882549285889" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </ComboBox>
+      <TextField fx:id="getteethnum" layoutX="387.0" layoutY="456.0" promptText="Teeth_Number" />
+      <TextField fx:id="gettreatid" layoutX="542.0" layoutY="456.0" promptText="Treatment_id" />
+      <TextField fx:id="Treatment_id_search" layoutX="392.0" layoutY="536.0" promptText="Treatment_id" />
+      <TableView fx:id="TreatmentToPatoentTable" layoutX="108.0" layoutY="131.0" prefHeight="220.0" prefWidth="560.0">
+        <columns>
+          <TableColumn fx:id="pemail" prefWidth="211.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Pemail" />
+          <TableColumn fx:id="diagnosisid" prefWidth="101.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Did" />
+            <TableColumn fx:id="teethnum" prefWidth="119.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Teeth_Number" />
+            <TableColumn fx:id="Treatid" prefWidth="126.0" style="-fx-background-color: #f5deb3; -fx-border-color: #000000;" text="Treatment_id" />
+        </columns>
+      </TableView>
+      <TextField fx:id="getdid" layoutX="242.0" layoutY="456.0" prefHeight="25.0" prefWidth="140.0" promptText="Did" />
+      <TextField fx:id="Treatment_Patient_id_search" layoutX="242.0" layoutY="536.0" prefHeight="25.0" prefWidth="140.0" promptText="Did" />
+      <ImageView fitHeight="341.0" fitWidth="583.0" layoutX="774.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../Downloads/src/Teeth/teeth.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
